@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <div className="App-title">Countdown to December 25, 2018</div>
+        <div>
+          <div className="App-clock-days">14 days</div>
+          <div className="App-clock-hours">14 hours</div>
+          <div className="App-clock-minutes">14 minutes</div>
+          <div className="App-clock-seconds">14 seconds</div>          
+        </div>
+        <div>
+          <input type="text" name="inpDate" placeholder="New Date"/>
+          <button>Submit</button>
+        </div>
       </div>
     );
   }
