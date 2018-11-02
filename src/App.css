@@ -7,8 +7,3 @@
 .App-title {
   font-size: 50px;
 }
-
-.App-clock-days, .App-clock-hours, .App-clock-minutes, .App-clock-seconds {
-  display: inline;
-  margin: 10px;
-}
