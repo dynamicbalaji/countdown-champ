@@ -16,6 +16,10 @@ class Clock extends Component {
         this.getTimeUntil(this.props.deadline);
     }
 
+    componentDidMount(){
+        setInterval(() => this.getTimeUntil(this.props.deadline), 1000); // Milliseconds
+    }
+
     getTimeUntil(deadline){
         const timeRem = Date.parse(deadline) - Date.parse(new Date());
 
