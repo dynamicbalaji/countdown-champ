@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import { Form, FormControl, Button } from 'react-bootstrap';
 import Clock from './Clock';
 import './App.css';
@@ -17,6 +18,11 @@ class App extends Component {
     this.setState({ deadline });
   }
 
+  componentDidMount(){
+    // this.inpElement.focus();
+    ReactDOM.findDOMNode(this.inpElement).focus();
+  }
+
   render() {
     return (
       <div className="App">
@@ -26,7 +32,8 @@ class App extends Component {
           <FormControl type="text" 
           name="inpDate" id="inpDate" 
           placeholder="New Date"
-          className="App-deadline-input"/>
+          className="App-deadline-input"
+          inputRef={ (inp) => {this.inpElement = inp} }/>
           <Button onClick={() => this.changeDeadlineHandler()}>Submit</Button>
         </Form>
       </div>
