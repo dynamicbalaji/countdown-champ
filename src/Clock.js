@@ -32,7 +32,7 @@ class Clock extends Component {
     }
 
     addLeadingZero(inpNum){
-        return (inpNum < 10) ? "0"+inpNum : inpNum;
+        return (inpNum < 10 && inpNum > 0) ? "0"+inpNum : inpNum;
     }
 
     render(){
